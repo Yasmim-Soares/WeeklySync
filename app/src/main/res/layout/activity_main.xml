@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E8F3EC"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Painel de Rotina"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1B4332"
+        android:layout_marginBottom="12dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnAbaSemana"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Minha Semana"
+            android:backgroundTint="#2D6A4F"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="6dp"/>
+
+        <Button
+            android:id="@+id/btnAbaMes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Resumo do Mês"
+            android:backgroundTint="#95B8A6"
+            android:textColor="#1B4332"
+            android:layout_marginStart="6dp"/>
+    </LinearLayout>
+
+    <!-- ABA 1: MINHA SEMANA -->
+    <LinearLayout
+        android:id="@+id/layoutAbaSemana"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#D4E9DC"
+            android:padding="14dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/txtStatusMetasDiarias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metas de Hoje (Incentivo Diário)"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#1B4332"
+                android:layout_marginBottom="8dp"/>
+
+            <CheckBox
+                android:id="@+id/checkExercicioHoje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#1B4332"
+                android:buttonTint="#722F37"
+                android:text="Praticar pelo menos 30 min de exercício"/>
+
+            <CheckBox
+                android:id="@+id/checkLeituraHoje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#1B4332"
+                android:buttonTint="#722F37"
+                android:text="Ler páginas de um livro"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnGerarRotinaIA"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="✨ Montar rotina"
+            android:textStyle="bold"
+            android:backgroundTint="#722F37"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/editNovaTarefa"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="Nova tarefa (ex: Estudar Java)"
+                android:textColor="#1B4332"
+                android:textColorHint="#52796F"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerDiaSemana"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="#D4E9DC"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnAdicionarTarefa"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="+"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2D6A4F"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTarefas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/layoutAbaMes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="18dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Análise de Desempenho Mensal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1B4332"
+                android:layout_marginBottom="18dp"/>
+
+            <TextView
+                android:id="@+id/txtLabelGraficoTarefas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarefas Cumpridas no Mês: 0%"
+                android:textStyle="bold"
+                android:textColor="#1B4332"/>
+            <ProgressBar
+                android:id="@+id/barGraficoTarefas"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:max="100"
+                android:progress="0"
+                android:progressTint="#1B4332"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/txtLabelGraficoExercicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frequência de Exercícios (Meta 30 dias): 0%"
+                android:textStyle="bold"
+                android:textColor="#2D6A4F"/>
+            <ProgressBar
+                android:id="@+id/barGraficoExercicio"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:max="100"
+                android:progress="0"
+                android:progressTint="#52B788"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/txtLabelGraficoLeitura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hábito de Leitura (Meta 30 dias): 0%"
+                android:textStyle="bold"
+                android:textColor="#722F37"/>
+            <ProgressBar
+                android:id="@+id/barGraficoLeitura"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:max="100"
+                android:progress="0"
+                android:progressTint="#722F37"
+                android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:id="@+id/txtFeedbackMensal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Complete suas tarefas e hábitos diários para ver seu gráfico crescer!"
+                android:padding="12dp"
+                android:background="#D4E9DC"
+                android:textColor="#1B4332"
+                android:textSize="14sp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Histórico de Meses Anteriores"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#722F37"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:id="@+id/layoutHistoricoMeses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

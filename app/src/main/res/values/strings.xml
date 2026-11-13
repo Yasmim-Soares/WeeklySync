@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WeeklySync</string>
+    <string name="title_criar_conta">Criar Conta</string>
+    <string name="subtitle_criar_conta">Preencha seus dados para começar</string>
+    <string name="hint_nome_cadastro">Seu nome (ex: Yasmim)</string>
+    <string name="hint_email_cadastro">Seu e-mail válido</string>
+    <string name="hint_senha_cadastro">Crie uma senha</string>
+    <string name="requisitos_senha">* Mínimo de 8 caracteres e 1 número ou símbolo</string>
+    <string name="btn_validar_e_cadastrar">Validar E-mail e Cadastrar</string>
+    <string name="btn_ja_tenho_conta">Já tenho conta (Voltar ao Login)</string>
+    <string name="msg_verificando_email">Verificando e-mail&#8230;</string>
+    <string name="msg_preencha_campos">Preencha todos os campos!</string>
+    <string name="msg_email_invalido">Formato de e-mail inválido!</string>
+    <string name="msg_senha_invalida">A senha precisa de 8+ caracteres e pelo menos 1 número ou símbolo!</string>
+    <string name="msg_dominio_inexistente">Este domínio de e-mail não existe! Digite um e-mail real.</string>
+    <string name="msg_conta_criada">Conta criada com sucesso!</string>
+    <string name="msg_email_ja_cadastrado">Este e-mail já está cadastrado!</string>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="28dp"
+    android:background="#E8F3EC">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WeeklySync"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#1B4332"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sua rotina, leitura e treinos em dia"
+        android:textSize="14sp"
+        android:textColor="#2D6A4F"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Seu e-mail"
+        android:textColor="#1B4332"
+        android:textColorHint="#52796F"
+        android:inputType="textEmailAddress"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editSenha"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Sua senha"
+        android:textColor="#1B4332"
+        android:textColorHint="#52796F"
+        android:inputType="textPassword"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:layout_marginBottom="6dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="* Mínimo de 8 caracteres e 1 número ou símbolo"
+        android:textSize="12sp"
+        android:textColor="#722F37"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Entrar"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2D6A4F"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Criar Nova Conta"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#722F37"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="28dp"
+    android:background="#E8F3EC">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Criar Conta"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#1B4332"
+        android:layout_marginBottom="6dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preencha seus dados para começar"
+        android:textSize="14sp"
+        android:textColor="#2D6A4F"
+        android:layout_marginBottom="28dp"/>
+
+    <EditText
+        android:id="@+id/editNomeCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Seu nome (ex: Yasmim)"
+        android:textColor="#1B4332"
+        android:textColorHint="#52796F"
+        android:inputType="textPersonName"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:layout_marginBottom="14dp"/>
+
+    <EditText
+        android:id="@+id/editEmailCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Seu e-mail válido"
+        android:textColor="#1B4332"
+        android:textColorHint="#52796F"
+        android:inputType="textEmailAddress"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:layout_marginBottom="14dp"/>
+
+    <EditText
+        android:id="@+id/editSenhaCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Crie uma senha"
+        android:textColor="#1B4332"
+        android:textColorHint="#52796F"
+        android:inputType="textPassword"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:layout_marginBottom="6dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="* Mínimo de 8 caracteres e 1 número ou símbolo"
+        android:textSize="12sp"
+        android:textColor="#722F37"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnFinalizarCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Cadastrar"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2D6A4F"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnVoltarLogin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Já tenho conta (Voltar ao Login)"
+        android:textSize="14sp"
+        android:backgroundTint="#722F37"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>
